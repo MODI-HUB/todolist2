@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+body{
+    overflow-x: hidden;
+}
+
+
 nav{
     position: absolute;
     top:0;
@@ -19,6 +24,7 @@ nav{
 
 
 body {
+    background-image: url("ANIMATED NATURE 96ba3404-8abd-4fb3-a373-3c588845d9c2.png");
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -31,6 +37,7 @@ body {
 }
 
 #logo{
+    color:white;
     margin-bottom: 0;
 }
 
@@ -46,6 +53,7 @@ ul{
     width: 100%;
 }
 .nav-content{
+    color:white;
     display:flex;
     align-items:center;
     justify-content: space-evenly;
@@ -53,8 +61,10 @@ ul{
 
 .container {
     width: 80%;
+    color: white;
     max-width: 600px;
-    background-color: #fff;
+    /* background-color: #ffffff47; */
+    backdrop-filter:blur(20px);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -97,7 +107,8 @@ h2 {
 
 .show-all-btn,
 .show-completed-btn,
-.show-incomplete-btn {
+.show-incomplete-btn,
+.delete-all-btn {
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -121,6 +132,7 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: #f9f9f9;
+    color: black;
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 5px;
@@ -136,7 +148,22 @@ h2 {
     justify-content:center ;
     align-items: center;
 }
+.edit-task{
+    display: none;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+.save{
+    margin-left:5px;
+    padding: 5px 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 .delete-btn {
     padding: 5px 10px;
     background-color: #ff3333;
@@ -155,8 +182,57 @@ h2 {
     border:none;
 }
 
+.edit-btn{
+    margin-left:5px;
+    padding: 5px 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#hamburger-icon{
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+}
+#menu{
+    display: none;
+    z-index: 10;
+}
 @media (max-width: 600px) {
     .container {
         width: 100%;
     }
+    #hamburger-icon{
+        display: flex;
+    }
+    .nav-content{
+        display:none;
+    }
+    .link-container{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #hamburger-menu-container{
+        position: relative;
+        overflow: visible;
+    }
+    #menu{
+        position: absolute;
+        top: 40px;
+        height: 25vh;
+        width: 30vw;
+        background-color: gray;
+        color: white;
+        transition: all 200ms ease-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3vh;
+    }
+    
 }
