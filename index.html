@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a82a1d8ea5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <nav>
-        <h1 id="logo">To-Do List App</h1>
-        <div class="link-container">
-            <ul class="nav-content">
-                <li>Home</li>
-                <li>login</li>
-                <li>sign-up</li>
-            </ul>
+      <h1 id="logo">To-Do List App</h1>
+      <div class="link-container">
+        <ul class="nav-content">
+          <li>Home</li>
+          <li>login</li>
+          <li>sign-up</li>
+        </ul>
+        <div id="hamburger-menu-container">
+          <i id="hamburger-icon" class="fa-solid fa-bars"></i>
+          <div id="menu">
+            <div class="ham-link">Home</div>
+            <div class="ham-link">Login</div>
+            <div class="ham-link">Sign-Up</div>
+          </div>
         </div>
+      </div>
     </nav>
     <div class="container">
-        <h1>To-Do List</h1>
-        <form class="add-task-form">
-            <input type="text" id="task-input" placeholder="Add a new task...">
-            <button type="submit" id="add-task-btn">Add</button>
-        </form>
-        <div class="task-list">
-            <h2>Tasks:</h2>
-            <ul id="task-list-container"></ul>
-            <button class="show-all-btn">Show All Tasks</button>
-            <button class="show-completed-btn">Show Completed Tasks</button>
-            <button class="show-incomplete-btn">Show Incomplete Tasks</button>
-        </div>
+      <h1>To-Do List</h1>
+      <form class="add-task-form">
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <button type="submit" id="add-task-btn">Add</button>
+      </form>
+      <div class="task-list">
+        <h2>Tasks:</h2>
+        <ul id="task-list-container"></ul>
+        <button class="show-all-btn">Show All Tasks</button>
+        <button class="show-completed-btn">Show Completed Tasks</button>
+        <button class="show-incomplete-btn">Show Incomplete Tasks</button>
+        <button class="delete-all-btn">Delete all Tasks</button>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
